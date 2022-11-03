@@ -34,12 +34,10 @@ locals {
         "sub-xxx",
         "sub-xxx"
     }]
-}
-
-locals {
-    security_groups = [{
+        security_groups = [{
         "sgxxx",
         "sgxxx",
         "sgxxx"
     }]
 }
+

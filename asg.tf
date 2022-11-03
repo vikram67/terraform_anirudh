@@ -8,6 +8,8 @@ module "ASG" {
   desired_capacity          = var.desired_capacity
   pattern_name              = var.pattern_name
   ec2_instance_type         = var.ec2_instance_type
+  image_id                  = local.ami_id
+  vpc_security_group_ids    = local.security_groups
   health_check_type         = "EC2"
   owner                     = var.owner
   owner_contact             = var.owner_contact
@@ -22,3 +24,13 @@ module "ASG" {
 
 
 }
+
+locals {
+  ami_id  = "ami-***"
+  security_groups = [{
+        "sgxxx",
+        "sgxxx",
+        "sgxxx"
+    }]
+}
+
